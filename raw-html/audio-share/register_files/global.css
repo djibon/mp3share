@@ -1,0 +1,2780 @@
+
+/* @group global reset */
+
+* { margin: 0; padding: 0; }   
+ul { list-style: none; }
+p { margin: 10px 0; }
+a img { border: 0; }
+
+/* @end */
+
+/* @group =base */
+
+body {
+	background: #fff;
+	text-align: center;
+	font: 80% "Trebuchet MS", Verdana, Sans-Serif;
+	color: #333;
+}
+#main_wrap {
+	background: #fff;
+	padding: 35px 0 20px;
+}
+.center_wrap {
+	width: 920px;
+	margin: 0 auto;
+	text-align: left;
+}
+#page_footer .center_wrap { width: 940px; }
+.clear {
+	height: 1px;
+	clear: both;
+	margin-top: -1px;
+	overflow: hidden;
+}
+.row:after, .clearfix:after, .activity_stream li:after, .search_row:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.add_top, #add_top { margin-top: 15px; }
+.add_top_long, #add_top_long { margin-top: 25px; }
+.add_bottom, #add_bottom { margin-bottom: 15px; }
+.add_bottom_long, #add_bottom_long { margin-bottom: 25px; }
+.add_border { border-bottom: 1px solid #ecf0f1; padding-bottom: 15px; margin-bottom: 15px; }
+.pad_top { padding-top: 10px; }
+.pad_bottom { padding-bottom: 10px; }
+.no_bottom, #no_bottom { margin-bottom: 0; padding-bottom: 0; }
+.no_top, #no_top { margin-top: 0; }
+.no_top_pad { padding-top: 0; }
+.no_border { border: 0; }
+.no_clear, #no_clear { clear: none; }
+small { font-size: 90%; }
+.left { float: left; }
+img.left { margin: 0 15px 15px 0; }
+.right { float: right; }
+img.right { margin: 0 0 15px 15px; }
+.text_right { text-align: right; }
+.text_center { text-align: center; }
+.text_gray2 { color: #666666; }
+h2, h3, h4, h5 { font-weight: normal; }
+h2 { font-size: 185%; margin: 25px 0; padding: 0 0 10px 20px; border-bottom: 1px solid #ccc; }
+h2.no_bottom { padding-bottom: 10px; }
+h3 { font-size: 150%; margin: 15px 0; }
+h4 { font-size: 135%; margin: 15px 0; }
+h5 { font-size: 115%; margin: 5px 0; }
+h3.pink, h5.pink { background: #ff50a5; padding: 5px 10px; color: #fff; }
+h3.block_hd, h4.block_hd { background: #12525e; padding: 5px 10px; color: #fff; }
+.hide { display: none; }
+p.top_border { border-top: 1px solid #ccc; padding-top: 20px; margin-top: 20px; }
+
+	/* @group -form elements */
+	label { font-weight: bold; }	
+	input, textarea, select { font: 100% "Lucida Grande", "Lucida Sans Unicode", Verdana, Sans-Serif; }
+	input, textarea {
+		line-height: 130%;
+		color: #535353;
+		padding: 5px;
+		background: #eee;
+		border-top: 1px solid #d1d1d1;
+		border-left: 1px solid #d1d1d1;
+		border-right: 1px solid #e9e9e9;
+		border-bottom: 1px solid #e9e9e9;
+	}
+	input:focus, textarea:focus { background: #f7f7f7; }
+	fieldset { border: 0; }
+	button, .button, .button:active, .button:focus {
+		border: 0;
+		cursor: pointer;
+		background: #fa47a2 url(http://demo.audiosharescript.com/images/bg_button.gif) 0 100% repeat-x;	
+		font: 135% "Trebuchet MS",Verdana,Sans-Serif;
+		color: #fff;
+		padding: 6px 12px;
+	}
+	button.sm, .sub_form_sm button {
+		font-size: 100%;
+		padding: 4px 10px;
+	}
+	button:hover, .button:hover { padding: 5px 11px; }
+	button.sm:hover, .sub_form_sm button:hover { padding: 3px 9px; }
+	label {
+		/*font-weight: bold;*/
+		text-align: right;
+		float: left;
+		font-size: 110%;
+	}
+	input {
+		border: 1px solid #b3b3b3;
+		padding: 5px;
+		font: 110% "Trebuchet MS",Verdana,Sans-Serif;
+		background: #fff url(http://demo.audiosharescript.com/images/bg_input.gif) bottom left repeat-x;
+	}
+	input:focus, input:hover, button:hover, .button:hover { border: 1px solid #10b8d6; }
+	#home .check, #signup .check, .check, #pop_signup .check, #public_wrap .check, #public_wrap_sm .check, #pop_signup_body #remember_me {
+		width: auto;
+		height: auto;
+		border: 0;
+		background: transparent;
+	}
+	.error {
+		background: #fffac0;
+		padding: 20px 10px 10px;
+		margin: 0 0 20px;
+	}	
+	.error label, #signup_wrap .error label, #home .error label {
+		color: #d1a10f;
+		padding: 0 10px 0 0;
+		font-size: 180%;
+		line-height: normal;
+		margin-top: -5px;
+	}
+	.form_pad .fieldWithErrors{	
+		display:inline;
+		margin-left:20px;
+	}
+	.fieldWithErrors input{	
+		border:1px solid #FF3366;
+	}
+	input.radio {
+		width: auto;
+		padding: 0;
+		background: transparent;
+		border: 0;
+	}
+	.success, #playlist-message p {
+		background: #d3f0d1;
+		border: 1px solid #b5e2b2;
+		padding: 10px;
+		margin: 0;
+	}	
+	#playlist-message p {
+		margin: 10px 0 20px;
+	}
+	.need_log {
+		padding: 20px;	
+		margin-top: 10px;
+		border: 1px solid #fff6aa;
+		background: #fffac0;
+	}
+	/* @end */
+	
+	/* @group -links */
+	a img { border: 0; }
+	a { text-decoration: underline; color: #333; }
+	a:hover { text-decoration: none; }
+	a:active, a:focus { outline: none; }
+	.gray a, a.gray { color: #333; }
+	.gray2, .text_gray2 a { color: #666666; }
+	.pink a, .pink_link, a.pink, .blue .pink, .blue a.pink { color: #e5338e; }
+	.blue a, a.blue { color: #00859a; }
+	.white a { color: #fff; }
+	/* @end */
+
+/* @end */
+/* @group mast */
+
+#mast { background: #000; }
+#mast .center_wrap { padding: 10px 0 5px; }
+#mast h1 {
+	padding: 30px 0 0 20px;
+	float: left;
+	height: 100%;
+}
+#nav_bar {
+	height: 33px;
+	background: url(http://demo.audiosharescript.com/images/bg_nav_top.gif) 100% 0 no-repeat;
+	float: right;
+	padding: 8px 15px 0 160px;
+	position: relative;
+}
+#nav_bar button, #nav_bar button:hover {
+	font-size: 100%;
+	background: #26aebf url(http://demo.audiosharescript.com/images/bg_search_button.gif) 0 100% repeat-x;
+	padding: 4px;
+}
+#nav_bar button:hover {
+	padding: 3px;
+	border: 1px solid #1fd7ee;
+}
+#nav_bar input {
+	font-size: 100%;
+	border: 3px solid #fff;
+	padding: 2px;
+	color: #666666;
+	width: 350px;
+	margin-right: 5px;
+	font-style: italic;
+}
+#nav_cat {
+	position: absolute;
+	height: 41px;
+	width: 138px;
+	left: 0;
+	top: 0;
+}
+#nav_cat a {
+	text-indent: -9000px;
+	display: block;
+}
+#link_cat {
+	width: 138px;
+	background: url(http://demo.audiosharescript.com/images/nav_categories_2.gif) 0 0 no-repeat;
+	height: 41px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+#nav_cat:hover #link_cat, #nav_cat.hover #link_cat { background: url(http://demo.audiosharescript.com/images/nav_categories_2.gif) 0 -41px no-repeat; }
+#nav_cat:hover .drop_down, #nav_cat.hover .drop_down { display: block; }
+#nav_cat .nav_arrw {
+	left: 106px;
+	top: 16px;
+}
+.nav_arrw {
+	display: block;
+	position: absolute;
+	z-index: 20;
+	width: 14px;
+	height: 13px;
+	background: url(http://demo.audiosharescript.com/images/nav_arrw.gif) 0 0 no-repeat;
+	font-size: 5%;
+}
+.nav_arrw:hover { background-position: -14px 0; }
+.on .nav_arrw { background-position: 0 -13px; }
+.on .nav_arrw:hover { background-position: -14px -13px; }
+#mast_home_white #nav_util_list {
+	float: right;
+}
+#nav_util {
+	position: relative;
+	z-index: 1000;
+}
+#nav_util_list {
+	float: right;
+	margin: 3px 0 12px;	
+}
+#nav_util_list li {
+	float: left;
+	margin: 0 5px;
+	padding: 0 7px 0 0; 
+	border-right: 1px solid #7b754c;
+	position: relative;
+}
+#mast_home_white #nav_util_list li { border-right: 1px solid #333; }
+#nav_util_list li ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 185px;
+	padding: 10px 7px;
+	background: #fff;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	border-left: 1px solid #eee;	
+	z-index: 10000;
+	text-align: left;
+	font-size: 0.95em;
+	display: none;
+}
+#nav_util_list li:hover ul { display: block; }
+#nav_util_list li ul li { float: none; border-right: 0; padding: 0; margin: 0; }
+#nav_util_list li li a, #nav_util_list li:hover li a { 
+	background: none;
+	color: #00859a;
+	display: block;	
+	margin: 0;
+	padding: 5px;
+}
+#nav_util_list li:hover li a { border: 0; }
+#nav_util_list li li a:hover, #mast_home_white #nav_util_list li li a:hover { text-decoration: none; background: #f4f4f4; } 
+#nav_util_list li.last, #mast_home_white #nav_util_list li.last, #mast_home_white #nav_util_list li li { border: 0; }
+#nav_util_list li.admin a, #nav_util_list li.last a, #mast_home_white #nav_util_list li.last a, #mast_home_white #nav_util_list li.admin a { padding-right: 0; background: none; }
+#nav_util_list li.admin:hover a, #nav_util_list li.last:hover a { background: none; color: #f5e997; text-decoration: underline; padding: 5px 0 5px 7px; border: 0; }
+
+#nav_util_list li.no_drop:hover a { background: none; color: #f5e997; text-decoration: underline; padding: 5px 5px 5px 7px; border: 0; }
+#nav_util_list li.no_drop a, #mast_home_white #nav_util_list li.no_drop a, #mast_home_white #nav_util_list li.no_drop:hover a { padding-right: 5px; background: none; border-right: 0; }
+
+#nav_util_list, #nav_util_list a { color: #f5e997; }
+#nav_util_list li a {
+	color: #f5e997;
+	padding: 5px 19px 5px 7px;
+	background: url(http://demo.audiosharescript.com/images/nav_arrow_yellow.gif) 100% 50% no-repeat;
+	text-decoration: none;
+	border-right: 1px solid #000;
+}
+#mast_home_white #nav_util_list li a {
+	color: #00859a;
+	background: url(http://demo.audiosharescript.com/images/nav_arrow_gray.gif) 100% 50% no-repeat;
+	border-right: 1px solid #fff;
+}
+#mast_home_white #nav_util_list li:hover a { border-right: 1px solid #aaa; }
+#mast_home_white #nav_util_list li li a { background: none; }
+#mast_home_white #nav_util_list li:hover li a, #mast_home_white #nav_util_list li.last a, #mast_home_white #nav_util_list li.admin a { border-right: 1px solid #fff; }
+#nav_util_list li.last:hover a, #nav_util_list li.admin:hover a { border-right: 1px solid #000; }
+#nav_util_list li:hover a, #nav_util_list li a#curHover {
+	color: #333;
+	background: #fff url(http://demo.audiosharescript.com/images/nav_arrow_gray.gif) 100% 50% no-repeat;
+	border-right: 1px solid #aaa;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	padding: 4px 19px 5px 6px;	
+	text-decoration: underline;	
+}
+#nav_util_list li .over_y {
+	overflow-y: scroll;	
+	overflow-x: hidden;
+	max-height: 150px;
+	position: relative;
+}
+
+/*#nav_util .nav_right a, #nav_util .nav_right { color: #cdcdcd; }*/
+.drop_down {
+	background: #1a94a7;
+	padding: 10px;
+	position: absolute;
+	top: 41px;
+	left: 0;
+	width: 560px;
+	z-index: 100;
+	display: none;
+}
+.drop_down ul {
+	float: left;
+	width: 165px;
+	margin-left: 12px;
+	line-height: 90%;
+}
+.drop_down ul li {
+	margin: 0;
+}
+.drop_down a, #nav_cat .drop_down a {
+	text-indent: 0;
+	color: #fff;
+	padding: 4px;
+	height: 1%;	
+	font-size: 0.94em;
+}
+.drop_down a:hover { background: #12899c; }
+
+
+/* @end */
+/* @group =pages */
+
+.beta { background: #000; padding-bottom: 75px; }
+.col1 { width: 730px; margin-top: 10px; }
+#sidebar {
+	background: #ffe0f7;
+	padding: 20px;
+	margin-top: 10px;
+	width: 140px;
+	float: left;
+}
+#sidebar_wrap {
+	width: 180px;
+	float: left;
+}
+#sidebar ul { list-style: none; }
+#sidebar ul li {
+	padding-left: 15px;
+	margin-bottom: 8px;
+	background: url(http://demo.audiosharescript.com/images/bul_sidebar.gif) 0 5px no-repeat;
+}
+
+#sidebar ul ul {
+	margin: 5px 0 10px;
+}
+#sidebar ul ul li {
+	background:none;
+	padding-left:10px;
+}
+#sidebar ul li.cur {
+	font-weight:bold;
+	font-size:110%;
+}
+#sidebar ul li.cur a, #sidebar ul li.cur li a:hover { text-decoration: none; }
+#sidebar ul li.cur li {
+	font-weight:normal;
+	font-size:90%;
+}
+#sidebar ul li.cur li a { text-decoration: underline; }
+
+#sidebar ul ul li a { background-image: none; }
+.side_300 { width: 300px; }
+.paginate { margin-top: 10px; }
+.paginate ul { margin-right: 10px; }
+.paginate ul li, .paginate ul { float: left; list-style: none; }
+.paginate ul li { margin: 0 2px 0 0; }
+.paginate ul li a, .paginate ul li span {
+	display: block;
+	background: #999;
+	padding: 5px 9px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 110%;
+}
+.paginate ul li.ellipsis {
+	display: block;
+	padding: 5px 9px;
+	font-size: 110%;
+}
+.paginate ul li a:hover { background: #00859a; }
+.paginate ul li.current span {
+	background: #fff;
+	border: 1px solid #00859a;
+	padding: 4px 8px;
+	color: #333;
+}
+.paginate .disable span {
+	background: #dbdfdf;
+	padding: 5px 9px 5px 9px;
+	display: block;
+	color: #fff;	
+}
+.paginate p.left {
+	color: #999;
+	margin-top: 0;
+	padding: 7px 0 0;
+}
+
+	/* @group -browse */
+	#sidebar h5 {
+		margin-bottom: 10px;
+	}
+	.cat_all_list{
+		background: url(http://demo.audiosharescript.com/images/bg_cat_all.gif) 0 0 repeat-y;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	.cat_box {
+		padding: 10px;
+		width: 340px;
+		margin-bottom: 10px;
+		border-top:10px solid #fff;
+	}
+	.cat_box2 {
+		padding: 10px 10px 10px 130px;
+		width: 200px;
+		float: left;
+		margin-bottom: 10px;
+	}
+	.cat_box_grid{
+		width:120px;
+		float:left;
+		padding: 5px;
+	}
+	.cat_box2 a img.left {
+		background: #fff;
+		border: 1px solid #ccc;
+		padding: 5px;
+		margin: 0 0 0 -120px;
+	}
+	.cat_box_full {
+		background: #ecf0f1;
+		padding: 10px;
+		margin-bottom: 10px;
+	}	
+	.cat_body { background: url(http://demo.audiosharescript.com/images/bg_cat_body.gif) 0 0 repeat-y; }
+	.cat_body_full {
+		background: #fff;
+		padding: 10px;
+	}
+	.cat_box h3, .cat_box_full h3 {
+		font-size: 150%;
+		margin: 0 0 10px;
+	}
+	.cat_box h5 {
+		margin: 0 0 5px;
+		font-size: 95%;
+	}
+	.cat_box .left {
+		width: 130px;
+		padding: 10px;
+	}
+	.cat_box .right {
+		width: 160px;
+		padding: 10px;
+	}
+	.cat_box .right ul li {
+		margin: 0 0 10px;
+		font-size: 105%;
+	}
+	.cat_box .right ul li:last-child { margin-bottom: 5px; }
+	.cat_box .left .blue { margin: 5px 0 0; }
+	.vid_cont,
+	.aud_cont {
+		overflow: hidden;
+		width: 130px;
+		height: 98px;
+		background: #000;
+		position: relative;
+	}
+	.aud_cont { background: #ecf0f1 url(http://demo.audiosharescript.com/images/bg-audio.gif) 0 0 no-repeat; }
+	.vid_cont { 
+		background: #ecf0f1 url(http://demo.audiosharescript.com/images/bg-video.gif) 0 0 no-repeat; 
+		padding-top: 0;
+		height: 98px;
+	}
+	.vid_cont_sm,
+	.aud_cont_sm {
+		overflow: hidden;
+		width: 100px;
+		height: 75px;
+		background: #000;
+		position: relative;
+	}	
+	.aud_cont_sm{ background: #ecf0f1 url(http://demo.audiosharescript.com/images/bg-audio-sm.gif) 0 0 no-repeat; }	
+	.vid_cont_sm{ background: #ecf0f1 url(http://demo.audiosharescript.com/images/bg-video-sm.gif) 0 0 no-repeat; }	
+	
+	/*clip channel image */
+	span.channel_thumb,
+	span.aud_thumb{
+		display:block;	
+		overflow:hidden;
+		position:relative;	
+		margin: 10px 0 0 10px ;		
+		padding:2px;
+		border:1px solid #c8c2c4;
+		background:#FFF;	
+	}
+	span.channel_thumb:hover, span.aud_thumb:hover {
+		/*background: #eee;*/
+		border: 1px solid #9cb9c0;
+}
+	.vid_cont span.channel_thumb,
+	.aud_cont span.channel_thumb,
+	.aud_cont span.aud_thumb{
+		width:72px;
+		height:72px;
+	}
+	.vid_cont_sm span.channel_thumb,
+	.aud_cont_sm span.channel_thumb,
+	.aud_cont_sm span.aud_thumb{
+		width:45px;
+		height:45px;
+	}		
+	.vid_cont_sm span.channel_thumb, .aud_cont_sm span.channel_thumb {
+		margin-top: 12px;
+	}
+
+	.vid_cont span.channel_thumb img,
+	.aud_cont span.channel_thumb img,
+	.aud_cont span.aud_thumb img{
+		width:72px;
+		height:72px;
+	}
+	.vid_cont_sm span.channel_thumb img,
+	.aud_cont_sm span.channel_thumb img,
+	.aud_cont_sm span.aud_thumb img{
+		width:45px;
+		height:45px;
+	}	
+	
+	.vid_cont img, .vid_count_sm { position: relative; }
+	.add, .remove, .selected {
+		display: block;
+		text-indent: -9000px;
+		width: 19px;
+		height: 17px;
+		position: absolute;
+		left: 5px;
+		bottom: 5px;
+		z-index: 5;
+		padding: 0;
+	}
+	.add:hover, .remove:hover { border: 0; padding: 0; background-position: -19px 0; }
+	.selected:hover { border: 0; padding: 0; background-position: 0 0;}	
+	.add { background: url(http://demo.audiosharescript.com/images/link_add.gif) 0 0 no-repeat; }
+	.remove { background: url(http://demo.audiosharescript.com/images/link_remove.gif) 0 0 no-repeat; }
+	.selected { background: url(http://demo.audiosharescript.com/images/link_selected.gif) 0 0 no-repeat; cursor: default; }	
+	.quicklist-table .selected { background: url(http://demo.audiosharescript.com/images/link_remove.gif) 0 0 no-repeat; }
+	.show_another { margin-top: 8px; display: none; }
+	.show_another a {
+		padding: 2px 0 3px 20px;
+		background: url(http://demo.audiosharescript.com/images/link_show.gif) 0 0 no-repeat;
+		font-size: 90%;
+	}
+	.show_another a:hover { background: url(http://demo.audiosharescript.com/images/link_show_on.gif) 0 0 no-repeat; }
+	.rss_yellow {
+		padding: 2px 0 2px 22px;
+		background: url(http://demo.audiosharescript.com/images/rss_yellow.gif) 0 2px no-repeat;
+		margin-right: 5px;
+	}
+	.cat_box_big {
+		width: 320px;
+		padding: 10px;
+		background: #fff;
+	}
+	.cat_box_big h3 {	
+		margin: 0 0 10px;
+		padding: 0 0 0 0;
+		font-size: 170%;
+	}
+	.cat_box_big .subtopics{
+		border-bottom: 1px solid #ecf0f1;
+		padding:0 0 10px 0;
+	}
+	.cat_img_big { width:330px; }
+	.channel_img_big img,
+	.cat_img_big a img {
+		padding: 5px;
+		border: 1px solid #ccc;
+		float:left;
+		margin-bottom: 5px;
+	}
+	.channel_img_big{
+		border-top: 1px solid #ecf0f1;
+		padding-top: 15px;
+		margin-top: 10px;
+	}
+	.channel_img_big li {
+		margin-right: 15px;
+		width: 160px;
+	 	float: left;
+	}	
+	.channel_img_big li span.pink {
+		display: block;
+		padding-bottom: 5px;
+	}
+	.cat_img_big a img.left, .cat_img_big a img.right { margin: 0; }
+	.cat_box_big h3 small {
+		font-size: 65%;
+	}
+	/* @end */
+	/* @group -episode/channel */	
+	
+	.flv_odeo { padding: 16px 0 0 50px; }
+	.swf_hulu { padding: 55px 0 0 0; }
+	#ep_hd, #ep_foot{
+		background: #ecf0f1 url(http://demo.audiosharescript.com/images/bg_ep_line_white.gif) 0 0 repeat-y;	
+		color: #333;
+	}
+	#episode .ep_title{
+		width: 585px;
+		float: left;
+		padding: 15px 20px 15px 15px;
+	}
+	#episode #ep_hd h3, #episode #ep_hd h4, #episode #ep_hd p { margin:0; }
+	#episode #ep_hd h4{
+		font-size: 120%;
+		margin: 0 0 3px 0;
+	}
+	#episode #ep_hd p, #episode #ep_hd form{
+		font-size: 90%;
+		margin: 5px 0 0 0;
+	}
+	#episode a.subscribers { color: #666666; }
+	#episode #ep_hd h4 a, #ep_hd .pink a { color: #cc0066; }
+	#episode #ep_hd .blue a { color: #00859A; }
+	#ep_list_hd {
+		padding: 10px 15px 10px 60px;
+		float: right;
+		width: 215px;
+	} 
+	#list_hd {
+		padding: 15px 10px;
+		float: right;
+		width: 275px;
+	} 	
+	#ep_list_hd .activity_thumb {
+		float: left;
+		margin: 0 0 0 -60px;
+	}
+	#ep_options {
+		width: 610px;
+		background: #ECF0F1;
+		margin: 0 0 10px;
+	}
+	#options_body { padding: 10px 20px 20px; }
+	#options_body label { padding: 6px 10px 0 0; }
+	#options_body form input[type="text"] { width: 275px; }
+	#options_body textarea { 
+		width: 550px; 
+		height: 85px;
+		background: #fff;
+		overflow: scroll;
+	}	
+	#options_body li {
+		float: left;
+		width: 250px;
+		font-size: 110%;
+		background: url(http://demo.audiosharescript.com/images/bg_downloads.gif) 0 50% no-repeat;
+		padding: 2px 0 2px 18px;
+		margin: 0 0 5px;
+	}
+	#ep_options_tabs { background: #dfe2e3 url(http://demo.audiosharescript.com/images/bg_options_tabs.gif) 0 100% repeat-x; }
+	#ep_options_tabs li {
+		float: left;
+		border-right: 1px solid #c8cbcc;
+		font-size: 110%;
+		position: relative;
+	}
+	#ep_options_tabs li.cur { background: #ecf0f1; }
+	#ep_options_tabs li a {
+		text-decoration: none;
+		padding: 15px 20px 15px 45px;
+		display: block;
+	}
+	#ep_options_tabs li a:hover { background: #d3d3d3 url(http://demo.audiosharescript.com/images/bg_options_tabs_over.gif) 0 100% repeat-x; }	
+	#ep_options_tabs li.cur a:hover { background: none; }	
+	#ep_options_tabs li span {
+		display: block;
+		width: 18px;
+		height: 17px;
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		margin-top: -8px;
+		cursor: pointer;
+	}	
+	#download ul { padding-top: 10px; }
+	#opt_info span { background: url(http://demo.audiosharescript.com/images/ico_info.gif) 0 0 no-repeat; }
+	#opt_playlist span { background: url(http://demo.audiosharescript.com/images/ico_playlist.gif) 0 0 no-repeat; }
+	#opt_share span { background: url(http://demo.audiosharescript.com/images/ico_share.gif) 0 0 no-repeat; }
+	#opt_embed span { background: url(http://demo.audiosharescript.com/images/ico_embed.gif) 0 0 no-repeat; }
+	#opt_download span { background: url(http://demo.audiosharescript.com/images/ico_download.gif) 0 0 no-repeat; }
+	.feature_this {
+		background: #ff50a4;
+		padding: 3px;
+		color: #fff;
+		margin: 5px 0 15px;
+		text-decoration: none;
+		float: left;
+	}
+	.feature_this:hover { background: #000; }
+	#ep_hd a, #ep_foot a { color: #000; }	
+	#ep_foot {
+		font-size: 90%;
+		padding: 10px 320px 10px 20px;
+		clear: both;
+		line-height:1em;
+	}
+	#ep_foot p { line-height: 140%; }
+	#ep_foot h4 { margin: 0 0 15px; }
+	#ep_foot h4 a { color: #e5338e; }
+	#ep_foot h3 a { color: #00859a; }	
+	#ep_foot .right {
+		width: 250px;
+		margin-right: -290px;
+	}
+	#episode { 
+		background: #000 url(http://demo.audiosharescript.com/images/bg_ep_line.gif) 0 0 repeat-y; 
+		margin-bottom: 20px;
+	}
+	#producer_tools { 
+		background-color: #ecf0f1; 
+		padding: 10px 10px 10px 230px;
+		margin-bottom: 10px;
+		position: relative;	
+	}
+	#producer_tools span { 
+		color: #bbbbbb;
+		margin: 0px 10px;	
+	}
+	#producer_tools strong { 
+		font-size: 17px;
+		position: absolute;
+		left: 10px;
+		top: 8px;	
+	}
+	#new_episode_button { 
+		background-color: #ecf0f1; 
+		padding: 7px;
+		margin-bottom: 10px;
+		font-weight: bold;
+		color: white;
+		background:#FA47A2 url(http://demo.audiosharescript.com/images/bg_button.gif) repeat-x scroll 0pt 100%;	
+		position: absolute;
+		left:717px;
+		width: 186px;
+		text-align: center;
+		top: 3px;
+		text-decoration: none;
+	}
+	#new_episode_button:hover {
+		padding: 6px;
+		border:1px solid #10B8D6;
+	}	
+	#new_episode #flash_content { 
+		padding-left: 260px;
+	}
+	#new_episode .button { 
+		margin-top: 10px;
+	}
+	#channel { 
+		background: #ecf0f1 url(http://demo.audiosharescript.com/images/bg_channel_box.png) -5px 0 repeat-y; 
+		position: relative; 
+		border: 10px solid #ecf0f1;
+		margin-bottom: 25px;	
+	}
+	#channel .channel_info{
+		float: left;
+		width: 460px;
+	}
+	#channel_meta {
+		float: left;
+		width: 185px;
+		padding-top: 5px;
+		margin-left: 30px;
+		overflow: hidden;
+	}
+	#channel_meta p {
+		font-size: 90%;
+		line-height: 170%;	
+	}
+	#channel_meta #subscription-form { margin: 10px 0 20px; }
+	#channel img.channel_img{
+		float:left;
+		margin-right:20px;
+	}
+	#channel .channel_info h3 {
+		font-size:2em;
+		margin:0;
+	}
+	#channel .channel_info h4 {
+		font-size: 1.25em;
+		margin: 5px 0 10px;
+	}	
+	#channel .channel_info p { line-height: 135%; }
+	#channel .channel_info .meta{ font-size:90%; }
+	#channel #channel_meta button{
+		font-size:100% !important;
+		font-weight:bold;
+		padding:4px 10px;
+	}
+	#channel #channel_meta button:hover { padding: 3px 9px; }
+	#new_file label, #new_episode label {
+		float: none;
+	}
+	#episode_summary {
+		width: 550px;
+		height: 150px;
+}
+	#new_file p small {
+		display: block;
+		padding: 8px 0;
+		font-weight: normal;
+	}
+	#media_file_url {
+		width: 400px;
+	}
+	ul.reviews_list{
+		margin:-10px;
+		font-size:95%;
+	}
+	ul.reviews_list li{
+		border-bottom: 1px solid #ecf0f1; 
+		padding: 15px 15px 15px 65px;	
+	}	
+	ul.reviews_list p{	
+		margin: 5px 0;
+	}
+	ul.reviews_list img.rate_thumb{
+		float:left;
+		margin: -3px 0 0 -50px;
+	}	
+	form.review_form{
+		/*margin-top:10px;*/
+		background:#FFF;
+		padding:10px;
+	}
+	form.review_form h4{
+		float:left;
+		width:140px;
+	}
+
+	form.review_form .rate{
+		width:400px;
+		height:50px;
+	}
+	#review_form_section {
+		float: right;
+		width: 415px;
+	}
+	form.review_form .rate input{
+		border:none;
+		background:none;
+	}	
+	form.review_form .rate label{
+		float:left;
+		margin-right:10px;
+		cursor: pointer;
+	}
+	form.review_form .rate label img{	
+		vertical-align:middle;
+		margin:0 5px;
+	}
+	form.review_form label{
+		display:block;
+		font-weight:normal;
+		text-align: left;
+		float: none;
+		font-size: 100%;
+	}	
+	form.review_form textarea{
+		width:350px;
+		height:70px;
+	}
+	form.review_form button{
+		font-size:100%;
+		padding:4px 10px;
+		font-weight:bold;
+	}	
+	form.review_form button:hover { padding:3px 9px; }
+	#episode h3 {
+		margin: 0 0 10px;
+		font-size: 170%;
+		line-height: normal;
+	}
+	#episode #ep_title_logged h3 {
+		padding-left: 30px;
+	}	
+	#ep_left {
+		float: left;
+		width: 570px;
+		padding: 0 20px;
+	}
+	#ep_left h3 { }
+	#ep_wrap {
+		margin: 0 0 5px 0;
+	}
+	#audio_wrap {
+  		padding: 66px 0 0 12px;
+	}
+	.add2 {
+		color: #f5e997;
+		background: transparent url(http://demo.audiosharescript.com/images/link_add2.gif) 0 -18px no-repeat;
+		padding: 2px 0 2px 25px;
+		text-decoration: none;
+		font-size: 100%;
+	}
+	.add2:hover { 
+		background-position: 0 -125px; 
+		padding: 2px 0 2px 25px;		
+		border: 0;
+	}
+	.selected2 {
+		color: #f5e997;
+		background: url(http://demo.audiosharescript.com/images/link_selected2.gif) 0 0 no-repeat;
+		border: 0;
+		padding: 2px 0 2px 25px;
+		text-decoration: none;
+		font-size: 100%;
+		cursor: default;
+	}
+	.selected2:hover {
+		padding: 2px 0 2px 25px;		
+		border: 0;
+	}
+	.lblue { color: #73d4e3; }
+	
+	#ep_right {
+		float: right;
+		width: 299px;
+		background:#474747;
+		margin:0;
+		padding:0;
+		position:relative;
+	}
+	#ep_right .count{	
+		color:#fff;
+		padding:4px 15px 5px 15px;
+		font-size:90%;
+		margin:0;
+	}
+	#ep_right .count a{
+		color:#FFF;
+		font-weight:bold;
+	}	
+	#ep_right .vid_cont_sm, .aud_cont_sm {
+		border:1px solid #333;
+	}		
+	#chan_hd img {
+		padding: 3px;
+		background: #fefefe;
+		border: 1px solid #c8c1c8;
+		margin-left: -60px;
+	}	
+	#ep_list_hd button {
+		font-size: 100%;
+		padding: 3px;
+	}
+	 #chan_hd button {
+		font-size: 110%;
+		padding: 5px;
+		margin-bottom: 8px;
+	}
+	#ep_list_hd button:hover { padding: 2px; }
+	#chan_hd button:hover { padding: 4px; }
+	#chan_hd h3 { margin: 8px 0; }
+	#chan_hd h3 { font-size: 170%; padding-right: 535px; }
+	.ep_vid_list {
+		padding: 10px 10px 5px;
+		height: 80px;
+		border-top: 1px solid #2e2e2e;
+		position: relative;
+	}
+	.ep_vid_list .vid_cont_sm,
+	.ep_vid_list .aud_cont_sm {
+		float: left;
+		margin-left: 0;
+		margin-right: 10px;
+	}
+	.ep_scroll{
+		color:#ccc;
+		background:#000;
+		overflow-y:scroll;
+		overflow-x:hidden;
+		position:relative;
+	}
+	.disp_video .ep_scroll {
+		height: 420px; /* video height */
+	}
+	.disp_audio .ep_scroll {
+		height: 280px; /* audio height */
+	}	
+	.ep_scroll .scrollNav {
+		color:#ccc;
+		font-size:90%;	
+		padding: 4px 15px;
+		margin:0;
+	}
+	.ep_scroll .scrollNav a { color:#ccc; }
+	.ep_scroll .scrollNav a.disabled{
+		text-decoration:none;
+		color: #333;
+		cursor:default;
+	}	
+	#subscription-form a.disabled {
+		color: #a9a9a9;
+		text-decoration: none;
+	}
+	.ep_scroll .bottom { border-top:1px solid #2e2e2e; }
+	.ep_vid_list p { margin: 0 0; line-height: 120%; padding-top: 7px; }
+	.curmedia, #curmedia { background:#0f4851; }
+	#ep_right #curmedia .blue, #ep_right .curmedia .blue a { color: #96f1ff; }
+	#ep_right .blue a { color: #4fa6b5; }
+	.curmedia, .curmedia a, #curmedia, #curmedia a { color: #fff; } 
+
+	.ep_vid_list .cancel {
+		position: absolute;
+		background: #000;
+		width: 100%;
+		height: 88px;
+		left: 0;
+		top: 0;
+		z-index: 1000;
+		opacity: 0.8;
+		-moz-opacity: 0.8
+	}
+	.ep_vid_list .cancel a { 
+		color: #fff; 
+		display: block;
+		position: absolute;
+		right: 12px;
+		bottom: 15px;
+		font-style: italic;
+	}
+	.ep_vid_list.disabled button.add {
+	  display: none;
+	}
+
+	
+	#foot_pink {
+		margin: 20px 0 0;
+		background: #ffe0f6 url(http://demo.audiosharescript.com/images/bg_pink_foot.gif) 0 0 repeat-y;
+		border: 15px solid #ffe0f6;
+		padding: 0 15px;
+	}
+	#foot_pink h4 { margin: 0 0 5px; }
+	#foot_pink .left li { margin: 8px 0; }
+	#foot_pink .left { width: 260px; }
+	#foot_pink .right { width: 540px; }
+	#foot_pink .right ul {
+		float: left;
+		width: 180px;
+	}
+	#foot_pink .right a {
+		display: block;
+		padding: 4px 4px 4px 16px;
+		height: 1%;
+		background: url(http://demo.audiosharescript.com/images/bul_sidebar.gif) 5px 50% no-repeat;
+	}
+	#foot_pink .right a:hover { background-color: #ffd3f2; }
+	#chan_hd {
+		background: #ecf0f1 url(http://demo.audiosharescript.com/images/bg_chan_hd.gif) 0 100% repeat-x;
+		padding: 15px 15px 15px 80px;
+	}
+	#chan_left {
+		float: left;
+		width: 345px;
+		padding: 15px 0 5px 15px;
+		line-height: 125%;
+	}
+	#chan_right {
+		position: relative;
+		top: 15px;
+		right: 15px;
+		float: right;
+		width: 480px;
+		background: #fff;
+		padding: 10px;
+		border: 1px solid #d1dbdd;
+		margin-bottom: 15px;
+		min-height:250px;
+	}
+	#chan_right #ep_wrap { }
+	#chan_right h4 { margin: 3px 0 8px; }
+	#chan_left .vid {
+		float: left;
+		margin: 5px 15px 0 0;
+		height: auto;
+	}
+	.pop_ep { margin-top: 25px; }
+	.view_all_ep { padding: 3px 5px 0; }
+	.claim {
+		background: #fffbcf;
+		padding: 2px;
+	}
+	#ep_more_info, .more_info {
+		/*margin: 10px 0 0 0;*/
+		height: 0;
+		overflow: hidden;
+	}
+	#channel #ep_more_info, #ep_foot #ep_more_info, #ep_foot #ep_less_info {
+		margin: 0;
+	}
+	div#episode-summary {
+	  height: 4em;
+	  overflow: hidden;
+	}	
+	.episode_thumb {
+		width: 130px;
+		height: 98px;
+		/*border: 1px solid #9cb9c0;*/
+	}
+	.vid_cont_sm .episode_thumb {
+		width: 100px;
+		height: 75px;
+	}
+	/*#window-scroll .episode_thumb {
+		width: 100px;
+		height: 75px;
+	}*/
+	.episode-quicklist-form p.no_bottom { padding-left: 10px; }
+	.add_to_fav a {
+		display: block;
+		text-indent: -9000px;
+		width: 20px;
+		height: 20px;	
+	}
+	.add_to_fav	{
+		float: left;
+		margin: 2px 8px 0 0;
+	}
+	.ep_title .add-favorite { background: url(http://demo.audiosharescript.com/images/bg_fav.gif) 0 0 no-repeat; }
+	.ep_title .remove-favorite { background: url(http://demo.audiosharescript.com/images/bg_fav.gif) 0 -20px no-repeat; }	
+	#playlist .radio {
+		float: left;
+		margin: 7px 7px 0 0;
+	}
+	#claim_feed {
+		position: absolute;
+		bottom: -5px;
+		left: 712px;
+	}
+	.rss_black a {
+		padding-left: 17px;
+		background: url(http://demo.audiosharescript.com/images/rss_black.gif) 0 1px no-repeat;
+	}
+	.edit_episode label {
+		float: none;
+	}
+	/* @end */	
+	/* @group -search & archives */
+	#search_wrap {
+		background: #ecf0f1 url(http://demo.audiosharescript.com/images/bg_search_top.gif) 0 0 no-repeat;
+		padding: 10px;
+		width: 590px;
+	}
+	.module_wrap{
+		background: #ecf0f1 url(http://demo.audiosharescript.com/images/bg_search_top.gif) 0 0 no-repeat;		
+		padding: 10px;
+		margin:0 0 10px 0;
+	}	
+	.module_wrap_long {
+		background: #ecf0f1;		
+		padding: 10px;
+		margin:0 0 10px 0;
+	}	
+	#channel_left .module_wrap{
+		width: 590px;	
+	}
+	#archive_wrap{
+		background: #ecf0f1;
+		padding: 10px;
+		width:900px;
+	}
+	#search_wrap h3, .module_wrap h3, #archive_wrap h3 {
+		margin: 0;
+		padding-bottom: 5px;
+	}
+	#archive_wrap h3 {
+		padding-left: 10px;
+	}
+	#archive_wrap h3 em {
+		color:#999;
+		font-style:normal;
+		font-size:.9em;
+	}
+	#search_wrap h3.no_bottom,
+	.module_wrap h3.no_bottom,
+	#archive_wrap h3.no_bottom {	
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	#search_body, .module_body, #archive_body, .sub_white  {
+		background: #fff;
+		padding: 10px;
+	}
+	#search_nav li { float: left; }
+	#search_nav li {
+		display: block;
+		padding: 10px 15px;
+		font-size: 120%;
+		text-decoration: none;
+		position: relative;
+	}
+	#search_nav li.current {
+		background: #fff url(http://demo.audiosharescript.com/images/bg_search_tab.gif) 0 0 no-repeat;
+		position: relative;
+		color: #333;
+	}
+	#search_nav li a { color: #00859a; }
+	#search_nav li.current span { display: block; }
+	#search_nav li em {
+		color: #999;
+		font-style: normal;
+	}
+	#search_nav li span {
+		display: block;
+		width: 9px;
+		height: 15px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background: url(http://demo.audiosharescript.com/images/bg_search_tab_right.gif) 0 0 no-repeat;
+		display: none;
+	}
+	.results {
+		color: #999;
+		margin: 0;
+		padding: 15px 8px 0;
+	}
+	.search_options{
+		position:relative;
+		width:690px;
+	}
+	.search_filters{
+		font-size:90%;
+		width:140px;
+	}
+	.search_filters h5{
+		font-weight:bold;
+		margin-top:10px;
+	}	
+	.search_filters p{
+		clear:both;
+	}
+	.search_filters input{
+		background:none;
+		border:none;
+	}	
+	.search_filters label{
+		float:none;
+		font-weight:normal;
+	}
+	#sidebar .search_filters ul{
+		margin: 0 0 10px 0;
+	}
+	#sidebar .search_filters li{
+		background:none;
+		padding-left:0;
+	}
+	#sidebar .search_filters li li{
+		padding-left:15px;
+	}	
+	.views {
+		float: right;
+		margin: 0 0 5px;
+		border-bottom: 1px solid #ecf0f1;
+		padding-bottom: 10px;
+	}
+	#view_grid, #view_list {
+		display: block;
+		width: 22px;
+		text-indent: -9000px;
+		height: 20px;
+		float: right;
+		margin-left: 5px;
+	}
+	#view_grid { background: url(http://demo.audiosharescript.com/images/link_grid_view.gif) 0 0 no-repeat; }
+	#view_list { background: url(http://demo.audiosharescript.com/images/link_list_view.gif) 0 0 no-repeat; }
+	#view_list:hover, #view_grid:hover { background-position: 0 -21px; }
+	#view_list.current, #view_grid.current { background-position: 0 -42px; }
+	.search_box_grid {
+		width: 130px;
+		float: left;
+		margin: 10px 6px 0;
+		overflow: hidden;
+	}
+	/*.cat_body_full .search_box_grid,
+	#search_body .search_box_grid 	{
+		width: 150px;
+		margin: 5px 10px 0 0;
+	}*/
+	.search_ad,
+	.guide_ad {
+		background: #ecf0f1;
+		text-align: center;
+		clear: both;
+		padding: 10px;
+		margin: 10px 0;
+	}
+	.sky_ad {
+		background: #ecf0f1;
+		text-align: center;
+		padding: 10px;
+		margin: 10px 0 15px;
+		width: 160px;
+		float: left;
+		clear: left;
+		position:relative;
+	}	
+	#sidebar_search {
+		background: #ffeff7;
+		padding: 20px;
+	}
+	#sidebar_search ul li {
+		float: left;
+		width: 46%;
+		margin: 2px 10px 3px 0;
+		font-size: 95%;
+	}
+	#found_in { padding: 0 15px; }
+	#found_in .row { margin: 15px 0; }
+	#found_in .row .episode {
+		padding: 0;
+		margin: 0;
+	}
+	#found_in .row .episode img {
+		padding: 5px;
+		background: #fff;
+		border: 1px solid #ccc;	
+	}
+	#found_in .row .episode img.left { margin: 0 15px 0 0; }	
+	#found_in .row p { padding: 0 0 0 85px; margin: 0; }
+	#found_in .row .small {
+		font-size: 90%;
+		color: #4e4e4e;
+		margin-top: 5px;
+	}
+	.search_row {
+		border-bottom: 1px solid #ECF0F1;
+		padding: 0 0 15px 155px;
+		margin: 0 0 15px;
+	}
+	.search_row .vid_cont,
+	.search_row .aud_cont {
+		margin-left: -145px;
+		float: left;
+	}
+	.link_box {
+		margin-top: 3px;
+		background: url(http://demo.audiosharescript.com/images/link_box_sm.gif) 0 2px no-repeat;
+		padding-left: 16px;
+	}
+	/* @end */	
+	/* @group -signup/login */
+	.main {
+		text-align: left;
+		padding: 20px;
+		background: #fff;
+		margin: 0 auto;
+	}
+	#home, #signup { margin-top: 90px; }
+	#home { width: 640px; }
+	#signup { width: 640px; }
+	.hd {
+		padding: 20px;
+		background: #000;
+		margin-bottom: 20px;
+	}
+	.hd span {
+		color: #ffbbdc;
+		font-size: 180%;
+		float: right;
+		display: block;
+		padding-top: 18px;
+	}
+	#left_col {
+		float: left;
+		width: 50%;
+		line-height: 130%;
+	}
+	#right_col {
+		float: right;
+		width: 45%;
+	}	
+	#right_col form p {
+		padding-left: 90px;
+		margin: 15px 0;
+	}
+	#right_col .error { 
+		margin-top: 0; 
+		padding-left: 90px;
+	}
+	#right_col #login-form .error p {
+		padding: 0;
+		margin: 0;
+	}	
+	#home label {
+		width: 80px;
+		padding: 6px 10px 0 0;
+		margin-left: -90px;
+	}
+	#home input { width: 180px; }
+	#signup_wrap { padding-top: 10px; }
+	#signup_wrap label, #signup_wrap .p { font-size: 115%; }
+	#signup_wrap label {
+		width: 150px;
+		padding: 6px 0 0;
+		margin-left: -170px;
+	}	
+	#signup_wrap form .p, #signup_wrap .error {
+		padding-left: 200px;
+		margin: 20px 0;
+	}
+	#signup_wrap .error { margin-top: 0; }
+	.error ul {
+		margin: 10px 0 0 65px;
+	}
+	.error li {
+		margin: 4px 0 2px 5px;
+		padding-left: 15px;
+		background: url(http://demo.audiosharescript.com/images/bul_error.gif) 0 4px no-repeat;
+	}
+	#signup_wrap .fieldWithErrors { display: inline; }
+	#signup_wrap input { width: 300px; }	
+	#body_wrap label {
+		width: 80px;
+		padding: 6px 0 0;
+		margin-left: -90px;
+		font-size: 105%;
+	}
+	#body_wrap input { width: 170px; }
+	#body_wrap { background: url(..http://demo.audiosharescript.com/images/bg_dot.gif) 54% 0 repeat-y; }
+	.error label, #body_wrap .error label {
+		color: #d1a10f;
+		padding: 0;
+		font-size: 180%;
+		line-height: normal;
+		margin-top: -5px;
+	}
+	.exact_match {
+		padding: 10px 10px 15px 165px;
+		margin-bottom: 10px;
+	}
+	.exact_match img {
+		float: left;
+		padding: 5px;
+		background: #fff;
+		border: 1px solid #c9c9c9;
+		width: 135px;
+		height: 135px;
+		margin: 0 0 0 -160px;
+	}
+	#pop_signup {
+		width: 265px;
+		background: url(http://demo.audiosharescript.com/images/bg_playlist_add.png) 0 0 repeat;
+		padding: 5px;
+		position: absolute;
+		text-align: left;
+		z-index: 20000;
+		right: 40px;
+		top: 15px;
+	}
+	#pop_signup_body {
+		background: #ecf0f1;
+		padding: 5px 10px;
+	}
+	#pop_signup_body p { padding-left: 80px; }
+	#pop_signup_body p#no_pad { padding: 0; font-size: 90%; }	
+	#pop_signup_body p label {
+		margin-left: -80px;
+		font-size: 100%;
+		padding-top: 5px;
+	}	
+	#pop_signup_body p input {
+		font-size: 90%;
+		width: 150px;
+	}	
+	#pop_signup_body p input.error_input, .error_input {	
+		background: url(http://demo.audiosharescript.com/images/bg_input_error.gif) 100% 50% no-repeat;
+		border: 1px solid #c00;
+		padding-right: 30px;		
+		color: #c00;
+	}	
+	#pop_signup_body p input.error_input { width: 125px; }
+	#button_row {
+		padding: 5px 0 0;
+		font-size: 90%;
+	}
+	#pop_top {
+		width: 15px;
+		height: 14px;
+		background: url(http://demo.audiosharescript.com/images/bg_signup_pop_top.png) 0 0 no-repeat;
+		display: block;
+		position: absolute;
+		top: -2px;
+		right: 0;
+	}
+	#public_wrap p { padding-left: 150px; }	
+	#public_wrap p label {
+		margin-left: -150px;
+		padding-top: 5px;
+		width: 135px;
+	}	
+	#public_wrap_sm p { padding-left: 85px; }	
+	#public_wrap_sm .error p { margin: 0; }
+	#public_wrap_sm .error label { margin-top: -8px; }	
+	#public_wrap .error p { margin: 0; padding-left: 85px; }
+	#public_wrap .error ul, #public_wrap_sm .error ul { margin-left: 85px; }
+	#public_wrap .fieldWithErrors {
+		
+	}
+	#public_wrap .error label { margin-top: -8px; }	
+	#public_wrap_sm p label {
+		margin-left: -85px;
+		padding-top: 5px;
+		width: 70px;
+	}
+	#public_wrap_sm #no_pad { padding: 0; }
+	.form_desc { width: 450px; }
+	#public_wrap input, #public_wrap_sm input { width: 250px; }	
+	#public_wrap input.error_input, #public_wrap_sm p input.error_input { width: 225px; }	
+	/* @end */
+	/* @group -profile */
+	.sub_white {
+		margin-top: 10px;
+	}
+	.profile_box {
+		border: 1px solid #ccc;
+		padding: 10px;
+		width: 432px;
+		margin-bottom: 10px;
+	}
+	.profile_box h3 { margin: 0; }
+	#about_box p {
+		padding-left: 105px;
+		line-height: 125%;
+	}
+	#about_box img.left {
+		margin: 0 0 0 -105px;
+	}
+	.sub_white h4 {
+		margin: 0;
+		padding-left: 100px;
+	}
+	.unsub {
+		float: left;
+		width: 95px;
+	}
+	.unsub button {
+		font-size: 90%;
+		padding: 5px;
+		margin-top: 2px;
+	}
+	.unsub button:hover { padding: 4px; }
+	.unsub img {
+		background: #FEFEFE none repeat scroll 0%;
+		border: 1px solid #C8C1C8;
+		padding: 3px;
+	}
+	.person a{
+		width:120px;
+		display:block;
+		float:left;
+		background:#FFF;
+		text-align:center;
+		padding:10px 5px;
+		overflow:hidden;
+	}
+	.person a:hover{
+		background:#fffbcf;
+	}
+	.person img{
+		display:block;
+		margin:0 auto 5px auto;
+	}
+	img.profile_thumb{
+		width:45px;
+		height:45px;
+	}
+	.channel_thumb_list p {
+		margin: 0;
+		float: left;
+		width: 150px;
+		padding: 0 10px 10px;
+		overflow: hidden;
+	}
+	.channel_thumb_list img {
+		background: #fff;
+		border: 1px solid #ccc;	
+		padding: 5px;
+	}
+	.cat_body_full .guide_link_block { width: 315px; }
+	/* @end */
+	/* @group -admin */
+	table.listing {
+		margin: 0 0 10px 0;
+		background:#fff;
+		width:100%;
+	}
+	table.listing td {
+		border-top: 1px solid #eee;
+	}
+	table.listing td,
+	table.listing th {
+		padding: 4px 10px 4px 5px;
+	}
+	table.listing th a {
+		padding: 0 3px 0 2px;
+		text-decoration: none;
+	}
+	table.listing th a:hover {
+		background-color: #ff5577;
+		color: #fff;
+	}
+	table.listing tr.row1 td{
+		background-color: #eee;
+	}
+	.form_pad { padding: 10px 0 0; }
+	.form_pad p { padding-left: 150px; }
+	.form_pad input, .form_pad textarea { width: 300px; }
+	.form_pad p label {
+		float: left;
+		margin-left: -150px;
+		text-align: right;
+		width: 130px;
+		padding-top: 3px;
+	}
+	#user_bio {
+		width: 500px;
+		height: 100px;
+	}
+	div.admin_cont form, div.admin_list, div.pages {
+		background:#e0f4ff;
+		padding: 10px;
+	}
+	div.admin_cont .error{
+		margin-bottom:10px;
+	}
+	table#email-list input{ /*checkbox styling */
+		border:none;
+		background:#fff;
+	}
+	div.admin_list ul{
+		background:#FFF;
+		font-size: 1.2em;
+		line-height: 2em;
+		list-style: circle;
+		padding:10px 10px 10px 40px;
+	}
+	.tabs_sm {
+		position: relative;
+		bottom: -1px;
+	}
+	.tabs_sm li {
+		float: left;
+		font-size: 1.3em;
+	}
+	.tabs_sm li.cur { background: url(http://demo.audiosharescript.com/images/tab_sm_blue.gif) 0 0 no-repeat; }
+	.tabs_sm li a {
+		display: block;
+		padding: 10px 15px;
+	}
+	.tabs_sm li.cur a {
+		background: url(http://demo.audiosharescript.com/images/tab_sm_blue_right.gif) 100% 0 no-repeat;	
+		text-decoration: none;
+	}
+	td.approve a {
+		padding: 2px;
+		color: #77b300;
+	}
+	td.approve a:hover {
+		background: #77b300;
+		color: #fff;
+	}
+	td.reject a {
+		padding: 2px;
+		color: #b30000;
+	}
+	td.reject a:hover {
+		background: #b30000;
+		color: #fff;
+	}	
+	#channel_plays, #current_sub {
+		width: 400px;
+		padding: 5px 20px 15px;
+		background: #fff;
+		border: 1px solid #dae4e7;
+	}
+	#channel_plays { float: left; }	
+	#current_sub { float: right; }
+	table.stats {
+		margin-top: 20px;
+		width: 100%;
+	}
+	table.stats th {
+		font-weight: bold;
+		background: #c2d4d9;
+		padding: 3px 5px;
+		border-bottom: 1px solid #8da3a9;
+		border-left: 1px solid #8da3a9;
+	}
+	table.stats tr:hover, table.stats tr.shade:hover { background: #feffe3; }
+	table.stats td {
+		border-bottom: 1px solid #dae4e7;
+		padding: 4px 5px;
+	}
+	table.stats tr.shade { background: #ecf0f1; }
+	td.col1 { width: 80%; }
+	td.col2 { width: 20%; }
+	.sub_act {
+		float: left;
+		margin: 6px 8px 0 0;
+	}
+	/* @end */	
+	/* @group -home */
+	#mast_home_white {
+		background: #fff;
+		padding: 20px 0 10px;
+	}
+	.welc_user { margin: 3px 25px 0 0; float: right; }
+	#mast_home { 
+		background: #000;
+		padding: 20px 0;
+	}
+	#mast_home h1, #mast_home h3 { margin: 0 0 0 15px; }
+	#mast_home h3 {
+		color: #fff;
+		width: 365px;
+		font-size: 120%;
+		padding-top: 5px;
+	}
+	#mast_home_blue { 
+		background: #036572 url(http://demo.audiosharescript.com/images/bg_mast_blue.gif) 0 0 repeat-x; 
+		padding: 25px 0;
+	}
+	#mast_home_blue .center_wrap { position: relative; }
+	#home_cats {
+		border-top: 1px solid #189dad;
+		border-bottom: 1px solid #189dad;
+		padding: 10px 0 10px 15px;
+		color: #fff;
+		width: 385px;
+		margin-top: 25px;
+	}
+	#home_cats h4 { margin: 0 0 5px; }
+	#home_cats h4 a { text-decoration:none; }	
+	#home_cats h4 a:hover { text-decoration:underline; }	
+	#home_cats ul {
+		float: left;	
+		width: 125px;
+	}
+	#home_cats a {
+		display: block;
+		color: #fff;
+		padding: 3px 0;
+		height: 1%;	
+		font-size: 95%;
+	}
+	#home_feat_media {
+		width: 480px;
+		padding: 10px 5px 0;
+		background: #045a66;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	#home_feat_media li {
+		float: left;
+		margin: 0 5px 10px;
+	}
+	#home_feat_media li a img {
+		padding: 3px;
+		background: #fff;
+		height:144px;
+		width:144px;
+	}
+	#home_feat_media li a:hover img { background: #cddee0; }
+	#mast_home_blue button {
+		font-size: 120%;
+		background: #26aebf url(http://demo.audiosharescript.com/images/bg_search_button.gif) 0 100% repeat-x;
+		padding: 6px;
+		border: 0;
+	}
+	#mast_home_blue button:hover {
+		padding: 5px;
+		border: 1px solid #1fd7ee;			
+	}
+	#mast_home_blue input {
+		font-size: 110%;
+		border: 3px solid #fff;
+		padding: 5px;
+		color: #7b7b7b;
+		width: 280px;
+		margin: 0 5px 0 15px;
+		font-style: italic;
+	}
+	#home_cat_box.cat_box_full .search_box_grid {
+		padding-top: 5px;
+		margin: 0 8px;
+		width: 130px;
+	}
+	#search_four_up .search_box_grid {
+		margin: 5px 8px 0 0;
+		width: 162px;
+	}	
+	#home_cat_box .cat_body_full{ padding-bottom: 0; }
+	.home_wrap { padding: 20px 0 0; }
+	/* @end */
+	/* @group -terms */	
+	.terms { line-height: 130%;	}
+	.terms h4 {
+		margin: 20px 0 10px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #cee6e9;
+	}
+	.terms ol {
+		margin: 10px 0 10px 40px;
+	}
+	.terms ul {
+		list-style: disc;
+		margin: 10px 0 10px 35px;		
+	}
+	/* @end */	
+	/* @group -error pages */
+	.errorPage h2{
+		border: none;
+		padding: 0;
+		margin: 0 25px 0 0;
+		float: left;
+	}
+	.errorPage{
+		padding: 20px;
+		background: #fffac0;
+		margin-bottom: 25px;
+	}
+		
+	/* @end */
+	/* @group -color schemes */
+	.color_scheme, .color_scheme_custom {
+		float: left;
+		width: 220px;
+		padding: 15px;
+		border: 1px solid #ccc;
+		position: relative;
+		margin: 0 15px 10px 25px;
+	}
+	.color_scheme input, .color_scheme_custom .radio {
+		position: absolute;
+		left: -23px;
+	}
+	.color_scheme_custom {	
+		padding: 8px 15px 8px 100px;
+		width: 135px;
+		margin-top: 10px;
+	}
+	.color_scheme_custom p { margin: 7px 0; }	
+	.color_scheme_custom label { 
+		margin-left: -80px; 
+		float: left; 
+		padding-top: 6px; 
+		font-size: 100%;
+	}
+	.color_scheme_custom .colors {
+		width: 80px;
+	}
+	.color_scheme_custom img {
+		position: relative;
+		top: 3px;
+		margin-left: 5px;
+	}
+	#color_s1 { background: #ecf0f1; }
+	#color_s1 span { color: #3e3e3e; }
+	#color_s1 a { color: #3e3e3e; }
+	#color_s2 { background: #2899ab; }
+	#color_s2 span { color: #fff; }
+	#color_s2 a { color: #91e2ee; }
+	#color_s3 { background: #0d3c44; }
+	#color_s3 span { color: #fff; }
+	#color_s3 a { color: #91e2ee; }	
+	#color_s4 { background: #f9f5dc; }
+	#color_s4 span { color: #3e3e3e; }
+	#color_s4 a { color: #670b37; }	
+	#color_s5 { background: #b22166; }
+	#color_s5 span { color: #fff; }
+	#color_s5 a { color: #ffbbdc; }				
+	#color_s6 { background: #670b37; }
+	#color_s6 span { color: #fff; }
+	#color_s6 a { color: #ffbbdc; }
+	#default {
+		position: absolute;
+		bottom: 105%;
+		left: 15px;
+	}
+	/* @end */
+	/* @group -producer dashboard */
+	.my_channel_wrap, #channel_analytics, #channel_activity, .guide_block {
+		padding: 10px;
+		background: #ECF0F1;
+		margin: 15px 0;
+	}
+	#channel_analytics {
+		width: 250px;
+		margin-top: 0;
+	}
+	#channel_activity {
+		width: 610px;
+		margin-top: 0;
+		line-height: 160%;
+	}
+	.my_channel_wrap img.left, .guide_block img.left, .guide_block1 img.left {
+		background: #FEFEFE;
+		border: 1px solid #C8C1C8;
+		padding: 3px;
+		margin: 0 15px 0 0;
+	}
+	.my_channel_wrap .color_scheme {
+		margin: 0;
+	}
+	/*#new_episode {
+	
+	}
+	#new_episode h5 {
+		font-weight: bold;
+		padding: 10px 0px 10px 0px;
+		float: left;
+		width:  220px;
+	}
+	#new_episode p {
+		border-bottom: #dee1e2 1px solid;
+		padding: 10px 0px 10px 260px;
+	}
+	#new_episode p small {
+		display: block;
+		clear: both;
+		margin: 5px 0px;
+	}
+	#new_episode label {
+		width:  260px;
+		text-align: left;
+		margin-left: -260px;
+	}
+	#new_episode p.radio input {
+		padding: 5px;
+		float: none;
+	}
+	#new_episode p.radio label {
+		padding: 0px;
+		float: none;
+		margin: 0 0 0 0px;
+		width: 100%;
+		font-weight: normal;
+	}
+	#new_episode p.radio .radio {
+		display: inline;
+		border: 0px;
+		background: none;
+		padding: 0px;
+		width: 10px;
+	}*/
+	.embed textarea {
+		width: 540px;
+		height:230px;
+	}
+	/* @end */
+	/* @group -guides */
+	.guide_wrap {
+		padding: 10px;
+		border: 1px solid #eee;
+		margin: 15px 0;
+	}
+	.guide_desc { width: 650px; }
+	.guide_edit p {
+		padding: 0 0 0 115px;
+	}
+	.guide_edit label {
+		float: left;
+		width: 115px;
+		padding: 5px 0 0;
+		text-align: right;
+		margin-left: -125px;
+		font-size: 100%;
+	}
+	.radios { margin: 15px 0; }
+	.radios label { padding: 0; }
+	.guide_block .guide_edit {
+		width: 600px;
+		margin-left: 70px;
+	}
+	.guide_edit textarea {
+		width: 325px;
+		height: 80px;
+		background: #fff;
+	}
+	.guide_edit input { width: 250px; }
+	.draggable {
+		cursor: move;
+		font-size: 125%;
+		background: #f6f6f6;
+		padding: 10px;
+		margin-bottom: 5px;
+		border: 1px solid #eee;
+	}
+	.draggable:hover { border: 1px solid #ccc; }
+	/*#guide_wrap h3 {
+		background: #b22166;
+		padding: 20px 10px 10px;
+		margin: -20px 0 5px;
+		color: #fff;
+	}*/
+	#guide_wrap h2 small a {
+		float: right;
+		font-size: 0.6em;
+		color: #e5338e;
+		padding: 5px 0 0;
+	}
+	#guide_desc {
+		font-size: 105%;
+		padding: 10px 10px 10px 175px;
+		margin: 0;
+	}
+	#guide_left, #channel_left { 
+		width: 610px; 
+	}
+	#guide_hd { 
+		background: #ecf0f1;
+		padding: 10px;
+		margin-bottom: 20px;
+	}	
+	#guide_hd h2 { padding-left: 10px; }
+	#guide_clip {
+		overflow: hidden;
+		width: 150px;
+		height: 125px;
+		float: left;
+		margin-left: -165px;
+	}
+	#guide_left h4 {
+		background: #ecf0f1;
+		padding: 5px;
+		margin: 15px 0 10px;
+	}
+	.guide_block1 {
+		padding-left: 125px;
+		margin: 0;
+	}
+	.guide_block1 img.left { margin-left: -125px; } 
+	.guide_link {
+		float: left;
+		width: 175px;
+		padding-right: 17px;
+		margin: 5px 0 10px;
+		padding: 0 15px 0 92px;
+	}
+	.guide_link .pink_link { font-size: 110%; }
+	.guide_link img {
+		padding: 3px;
+		background: #fefefe;
+		border: 1px solid #c8c1c8;
+		margin: 0 0 0 -92px;
+	}
+	.guide_link_block {
+		float: left;
+		width: 260px;
+		padding-right: 20px;
+		font-size: 110%;
+		line-height: 150%;
+	}
+	.guide_link_block li {	
+		padding-left: 10px;
+		background: url(http://demo.audiosharescript.com/images/bullet.gif) 0 5px no-repeat;
+		line-height: normal;
+		margin: 10px 0;
+	}
+	#guide_right {
+		float: right;
+		width: 300px;
+	}
+	#guide_followers,
+	#followers {
+		background: #ecf0f1;
+		padding: 10px;
+	}
+	#guide_followers a img,
+  	#followers a img{
+		float: left;
+		padding: 3px;
+		background: #FFF;
+		margin: 0 5px 10px 0;
+	}
+	#guide_followers a:hover img, #followers a:hover img { 
+		background: #dcdcdc; 
+	}
+	button.guide_btn, #guide_left h4 button.guide_btn {
+		background: #3399cc;
+		padding: 2px 5px;
+		font-size: 0.70em;
+		margin-right: 2px;
+	}
+	button.guide_btn:hover, #guide_left h4 button.guide_btn:hover {	
+		background: #b22166;
+		border: 0;
+		padding: 2px 5px;
+	}
+	#guide_panels .module_wrap {
+		background-image: none;
+	}
+	/* @end */	
+	/* @group -blog */
+	#blog_hd {
+		height: 60px;
+		background: url(http://demo.audiosharescript.com/images/beta_hd.gif) 0 0 no-repeat;
+		margin: 0 0 25px;
+		text-indent: -9000px;
+	}
+  #blog_hd a {
+    margin-left: -20px;
+    display: block;
+    width: 150px;
+    height: 50px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+	#blog_left {
+		float: left;
+		width: 625px;
+	}
+	#blog_right {
+		width: 210px;
+		float: right;
+		background: #f9ed96;
+		padding: 15px;
+	}
+	.post {
+		border-bottom: 1px solid #ccc;
+		padding: 0 0 25px;
+		margin-bottom: 25px;
+	}
+	.post .content{
+		margin: 10px 0;
+		line-height:1.5em;
+	}
+	.post h3, .post h4 {
+		margin: 0;
+	}
+	.comments{
+		margin:20px 0;
+	}
+	.comments textarea{
+		width:650px;
+		height:120px;
+		margin:5px 0 10px 0;
+	}
+	textarea#post_content{
+		width:700px;
+		height:400px;
+	}
+	/* @end */
+	/* @group -playlists */	
+	.count_2 {
+		display: block;
+		padding: 2px 10px 0 15px;
+	}
+	.playlist_wrap {
+		/*background: #ecf0f1;*/
+		border-bottom: 1px solid #ecf0f1;
+		padding: 10px 10px 20px;
+		margin: 5px 0 0;
+	}
+	.playlist_wrap h4 { margin: 0 0 8px; }
+	.playlist_wrap h4 em a {
+		font-size: 0.65em;
+		padding: 2px;
+		color: #898989;
+		text-decoration: none;
+		margin-left: 3px;
+	}
+	.playlist_wrap h4 em a:hover {
+		background: #898989;
+		color: #fff;
+	}
+	.delete {
+		color: #c30000;
+		float: right;
+		font-size: 0.9em;
+		text-decoration: none;
+		padding: 2px;
+		font-style: italic;
+	}
+	.playlist_list .delete { 
+		float: left; 
+		margin-top: 1px;
+	}
+	.playlist_list ul { margin-top: 10px; }
+	.delete:hover {
+		background: #c30000;
+		color: #fff;
+	}	
+	.playlist_list {
+		/*background: #fff;
+		padding: 10px;*/
+		margin-top: 8px;
+	}
+	.playlist_list li {
+		border-bottom: 1px solid #d4d4d4;	
+		padding: 10px 95px 10px 10px;
+		position: relative;
+	}
+	#add_playlist_section {
+		margin: 10px 0 0;
+		background: #ecf0f1;
+		padding: 10px;
+	}
+	.playlist_list li:last-child { border-bottom: 0; }
+	.playlist_list li:hover, .playlist_left li.sfhover { background: #e5e5e5; }
+	.playlist_list li:hover .move, .playlist_left li.sfhover .move { left: -30px; }	
+	.move {
+		cursor: move;
+		margin: 2px 0 0;
+	}
+	.expand {
+		padding-left: 17px;
+		color: #6a6a6a;
+		text-decoration: none;
+	}
+	.list_right {
+		float: right;
+		width: 70px;
+		text-align: right;
+		margin-right: -85px;
+	}
+	div.closed a.show_hide { background: url(http://demo.audiosharescript.com/images/expand_close.gif) 2px -106px no-repeat; }
+	div.open a.show_hide { background: url(http://demo.audiosharescript.com/images/expand_close.gif) 2px -8px no-repeat; }
+	div.closed ul { display: none; }
+	#playlist_add {
+		width: 250px;
+		background: url(http://demo.audiosharescript.com/images/bg_playlist_add.png) 0 0 repeat;
+		padding: 5px;
+		position: absolute;
+		text-align: left;
+		z-index: 10000;
+	}	
+	.playlist_body p.no_bottom em { 
+		display: block;
+		float: left;
+		padding-top: 4px;
+	}
+	#add_to_playlist_form { padding: 5px 0 0; }
+	#playlists_select { 
+		width: 200px; 
+		margin-bottom: 5px;
+	}
+	#playlist_name { font-size: 100%; }
+	.playlist_body {
+		background: #ecf0f1;
+		padding: 15px 10px;
+	}
+	#playlist_name { width: 200px; }
+	.close {
+		top: 10px;
+		right: 10px;
+		width: 11px;
+		height: 11px;
+		display: block;
+		background: url(http://demo.audiosharescript.com/images/btn_close.gif) 0 0 no-repeat;
+		position: absolute;
+		text-indent: -9000px;
+	}
+	#playlist_add button.sm { padding: 3px 5px; }
+	#playlist_add button.sm:hover { padding: 2px 4px; }	
+	.playlist_bot {
+		width: 15px;
+		height: 14px;
+		background: url(http://demo.audiosharescript.com/images/bg_playlist_add_bot.png) 0 0 no-repeat;
+		display: block;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+	}
+	/* @end */
+	/* @group -dashboard */	
+	#user_wrap, #friend_wrap {
+		background: #e0f4ff;
+		padding: 15px;
+	}
+	#user_wrap img {
+		padding: 5px;
+		background: #fff;
+	}
+	#friend_wrap { margin-top: 10px; }
+	#user_wrap p, #friend_wrap p { margin-top: 0; }
+	#user_wrap h4 { margin: 0 0 10px; }
+	.highlight, .activity_stream li span {
+		padding: 1px 2px;
+		background: #fdf8d5;
+	}
+	.activity_feature {
+		padding: 5px 75px 0 10px;
+		margin-bottom: 15px;
+		position: relative;
+	}
+	.activity_feature h4 { margin: 0 0 5px; }
+	.activity_thumb {
+		padding: 2px;
+		border: 1px solid #c8c2c4;
+		width: 45px;
+		height: 45px;
+		background: #fff;
+	}
+	.activity_feature .activity_thumb {
+		margin-right: -65px;
+		float: right;
+	}
+	.thumb_move_up {
+		position: relative;
+		bottom: -10px;	
+	}
+	#more_than {
+		border-bottom: 1px solid #ccc;
+		padding: 0 10px 10px;
+		margin-top: 30px;
+	}
+	.activity_screen {
+		margin-top: 10px;
+		padding-left: 145px;
+	}
+	.activity_screen .stream_cont {
+		float: left;
+		padding: 0;
+		height: 98px;
+		overflow: hidden;
+		margin: 0 0 10px -145px;
+	}
+	.activity_screen .stream_cont .search_box_grid { margin: 0; }
+	.activity_screen .less_info p, .activity_screen .more_info p { margin-top: 0; }
+	.activity_stream li {	
+		padding: 12px 75px 5px 10px;
+		line-height: 1.4em;
+	}
+	.activity_stream .activity_thumb {
+		margin: -8px -65px 0 0;
+		float: right;		
+	}
+	#friend_wrap li { float: left; }
+	#friend_wrap img {
+	  padding: 3px;
+	  background: #fff;
+	  width: 40px;
+	  margin: 5px 4px 0 0;
+	}
+	#friend_wrap a:hover img { background: #DCDCDC; }
+	#friend_wrap h4 { margin: 0 0 5px; }
+	.arrw_down {
+		background: url(http://demo.audiosharescript.com/images/arrow_down.gif) 0 50% no-repeat;
+		padding-left: 15px;
+	}
+	.arrw_up {
+		background: url(http://demo.audiosharescript.com/images/arrow_up.gif) 0 50% no-repeat;
+		padding-left: 15px;
+	}
+	.more_episodes li, .more_users li {
+		padding-left: 145px;
+		margin: 10px 0;
+		font-size: 1.1em;
+	}
+	.more_episodes ul, .more_users ul {
+		padding: 0 0 5px;
+	}
+	.user_sub_update {
+		float: left;
+		width: 102px;
+		margin-left: -117px;
+	}
+	.user_sub_update img {
+		width: 90px;
+		height: 90px;
+		padding: 5px;
+		border: 1px solid #c8c2c4;
+		float: right;
+		margin-bottom: 10px;
+	}
+	/* @end */	
+
+/* @end */
+/* @group footer */
+
+#page_footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+#footer {
+	font-size: 90%;
+	padding: 20px 0 55px;
+	color: #666666;
+	line-height: 135%;
+}
+#footer h4 {
+	color: #eb208b;
+	margin: 0;
+	font-size: 160%;
+}
+#footer h5 {
+	color: #333;
+	margin: 0;
+}
+#foot1 { width: 375px; }
+#foot1,#foot2,#foot3,#foot4 { float: left; }
+#foot2,#foot3,#foot4 { width: 150px; }
+#foot2 { margin: 0 25px 0 35px; }
+#foot3 { margin: 0 25px 0 0; }
+#footer p { line-height: 150%; }
+#footer .center_wrap { background: url(http://demo.audiosharescript.com/images/bg_footer.gif) 0 0 repeat-y; }
+#footer #add_feed a {
+	padding-left: 16px;
+	background: url(http://demo.audiosharescript.com/images/add_feed.gif) 0 3px no-repeat;
+	line-height: normal;
+	/*color: #eb208b;*/
+}
+#footer #add_feed a:hover {
+	background: #f4f4f4 url(http://demo.audiosharescript.com/images/add_feed.gif) 0 3px no-repeat;	
+}
+#footer #foot1 ul {
+	float: left;	
+	width: 120px;
+	margin: 10px 5px 0 0;
+}
+#footer ul { margin: 10px 0 0; }
+#footer ul a {
+	display: block;
+	padding: 2px;
+	height: 1%;	
+	font-size: 100%;
+	color: #666666;
+}
+#footer ul a:hover { background: #f4f4f4; }
+#qlist { 
+  height: 0; 
+  overflow: hidden;
+}
+#qlist_top {
+	background: url(http://demo.audiosharescript.com/images/bg_qlist_top.gif) 0 0 no-repeat;
+	margin: -8px 0 0;
+	padding: 10px;
+	border-bottom: 1px solid #464646;
+	border-top:2px solid #FFF;
+}
+#qlist .body {
+	background: #404040 url(http://demo.audiosharescript.com/images/bg_qlist_body.gif) 0 100% repeat-x;
+	padding: 15px;
+}
+#expand {
+	font-weight: bold;
+	color: #fffbcf;
+	padding-right: 13px;
+	margin-right: 10px;
+	background: url(http://demo.audiosharescript.com/images/bg_expand_up.gif) 100% 50% no-repeat;
+}
+#expand.open { background-image: url(http://demo.audiosharescript.com/images/bg_expand_down.gif); }
+#qlist_nav { position: relative; float: left; margin-left: 10px; }
+#qlist_link {
+	color: #f774a8;
+	font-weight: bold;
+	font-size: 110%;
+	margin: 0 20px 0 10px;
+	float: left;
+}
+#clear_ql { 
+	color: #ede8ec; 
+	font-size: 100%;
+	padding: 0;
+	background: transparent none;
+	border: 0;
+	padding-bottom: 1px;
+}
+#clear_ql_form { float: left; }
+#qlist_top a { text-decoration: none; }
+#qlist_top #expand:hover { text-decoration: underline; }
+#qlist_top #clear_ql:hover {
+  border-bottom: 1px solid white;
+  padding: 0;
+}
+.scroll_x {
+	overflow-x: auto;
+	overflow-y: hidden;
+	height: 140px;
+	width: 100%;
+}
+.vid {
+	width: 100px;
+	height: 120px;
+	overflow: hidden;
+	margin: 0 15px 0 0;
+}
+.vid a {
+	color: #74e6ec;
+	font-size: 11px;
+}
+
+/* @end */
+/* @group =misc */
+
+	/* @group -ads */
+	#ad_top {
+		background: #1e1e1e;
+	}
+	#ad_top .center_wrap, #ad_top_home .center_wrap {
+		text-align: center;
+		padding: 15px 0;
+	}
+	#ad_ep {
+		width: 610px;
+		text-align: center;
+		padding: 15px 0 0;
+	}
+	#ad_chan {
+		width: 610px;
+		text-align: center;
+		padding: 5px 0 15px;
+	}	
+	#ad_search_mid {
+		padding: 5px 0 10px;
+		text-align: center;
+	}
+	/* @end */
+
+img.pod_big {
+  height: 69px;
+  width: 69px;
+}
+img.pod_icon {
+  height: 45px;
+  width: 45px;
+}
+img.feature-preview {
+  height: 50px;
+}
+table#feature-table th {
+  border-bottom: 1px solid #eee;
+}
+table#feature-table tr.row0 td {
+  border: none;
+}
+.beta h2{
+	font-size:170%;
+	padding:0;
+	margin:0;
+	border:none;
+}
+.beta h4{
+	color:#d70f79;
+	font-size:130%;
+}
+#cp_colorpickerbox {
+  z-index: 1000;
+}
+div#panel-selection {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  position: absolute; 
+  right: 0; 
+  text-align: right; 
+  width: 200px; 
+}
+div.loading-image {
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+ul.horizontal li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+tr.claim_message {
+    background-color: #DDE;
+}
+form.review_form div.fieldWithErrors textarea { border: 1px solid #c00; }
+#errorExplanation h2 {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #c00;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+#errorExplanation {
+	border: 1px solid #fff6aa;
+	background: #fffacf;
+	padding: 10px;
+}
+#errorExplanation li {
+	font-style: italic;
+}
+.errorPage ul {
+	padding: 0 0 0 150px;
+}
+.errorPage li {
+	margin: 10px 0 0;
+	padding: 0 0 0 15px;
+	background: url(http://demo.audiosharescript.com/images/bullet.gif) 0 2px no-repeat;
+}
+.delete_episode {
+	background: #c00;
+	color: #fff;	
+	border: 1px solid #c00;
+	padding: 5px;
+	width: 275px;
+	text-align: center;
+	margin-bottom: 10px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	text-decoration: none;
+}
+.delete_episode:hover {
+	background: #fce5e5;
+	color: #c00;		
+}
+a.not_a_link {
+  text-decoration: none;
+  cursor: default;
+}
+.info {
+	border: 1px solid #fff6aa;
+	background: #fffacf;
+	padding: 5px;	
+	text-align: center;
+	font-size: 80%;
+	color: #333;
+}
+ins { text-decoration: none; }
+.feature_box { float: left; }
+.feature_box ul.horizontal { padding: 0; }
+.feature_box ul li { display: block; width: 220px; float: left; margin: 0; padding: 0; }
+.admin_box {
+	background-color: #fff;
+	border: 10px solid #E0F4FF;
+	font-size: 120%;
+	padding: 10px 10px 20px 10px;
+}
+a.warning { color: red; }
+#recaptcha_widget_div {
+	margin-left: 150px; 
+}
+
+.tagline {
+  color: #fff;
+  font-size: 160%;
+  margin-left: 25px;  
+}
+
+#matchmine_wrap {
+	padding-bottom: 50px;
+	position: relative;
+}
+div.matchmine {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+div.matchmine a {
+  color: #999;
+  text-decoration: none;
+}
+div.matchmine img {
+  margin-top: -3px;
+  vertical-align: middle;
+}
+div.matchmine_serial {
+  margin-top: 15px;
+}
+#mm_badge {
+	float: right;
+	margin-top: -5px;
+}
+#search_wrap #mm_badge {
+	margin-top: -10px;
+}
+/* @end */
+
+.problem_subject label {
+  width: 20em;
+}
+
+.uerror {
+font-family: Tahoma;
+font-size: 10pt;
+color: red;
+background-color: "#FFFF99";
+font-weight: bold;
+margin-left: 20px;
+display:none;
+} 
+
+.rateStars {
+	margin:auto;
+	padding:0;
+	width:130px;
+	_width:130px
+}
+.full_star,.half_star,.no_star {
+	margin:1px 2px;
+	padding:0;
+	width:20px;
+	height:24px;
+	display:block;
+	float:left;
+	border:0;
+	background:transparent url(http://demo.audiosharescript.com/images/rating.png) no-repeat 0px 0px
+}
+.half_star {
+	background:transparent url(http://demo.audiosharescript.com/images/rating.png) no-repeat 0px -24px
+}
+.no_star {
+	background:transparent url(http://demo.audiosharescript.com/images/rating.png) no-repeat 0px -48px
+}
+.rateThis {
+	margin:0;
+	padding:0;
+	padding-right:20px;
+	width:130px;
+	display:block;
+	float:left;
+	text-align:center
+}
+.rateThis p {
+	margin:0;
+	padding:0;
+	text-align:center;
+	font: normal 10px/12px Verdana,Arial,Helvetica,sans-serif
+}
