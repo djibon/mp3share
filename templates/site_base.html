@@ -14,22 +14,35 @@
     {% include "_account_bar.html" %}
 {% endblock %}
 
-{% block right_tabs %}
-    {% if user.is_authenticated %}
-        <ul class="tabs">{% spaceless %}
-            <li id="tab_profile"><a href="{% url profile_detail user.username %}">{% trans "Profile" %}</a></li>
-            <li id="tab_notices"><a href="{% url notification_notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
-        {% endspaceless %}</ul>
-    {% endif %}
-{% endblock %}
 
 {% block footer %}
-<div class="legal">
-    {% trans "&copy; 2010 &lt;your company here&gt;" %}
-    - <a href="{% url about %}">{% trans "About" %}</a>
-    - <a href="{% url terms %}">{% trans "Terms of Service" %}</a>
-    - <a href="{% url privacy %}">{% trans "Privacy Policy" %}</a>
-    - <a href="{% url dmca %}">{% trans "DMCA Notice" %}</a>
+<div class="center_wrap clearfix">
+  <div id="foot1">
+    <p>
+      Copyright © 2010 AudioShare Audio Sharing Script<br>Powered by <a target="_blank" href="http://www.audiosharescript.com/">AudioShareScript.com</a>
+    </p>
+  </div>
+  
+  <div id="foot2">
+    <ul>
+      <li><a href="http://demo.audiosharescript.com/aboutus.php">About Us</a></li>
+      <li><a href="http://demo.audiosharescript.com/advertising.php">Advertising</a></li>
+    </ul>
+  </div>
+  
+  <div id="foot3">
+    <ul>
+      <li><a href="http://demo.audiosharescript.com/contactus.php">Contact Us</a></li>
+      <li><a href="http://demo.audiosharescript.com/privacypolicy.php">Privacy Policy</a></li>
+    </ul>
+  </div>
+  
+  <div id="foot4">
+    <ul>
+      <li id="add_feed"><a href="http://demo.audiosharescript.com/syndicate.php">Syndicate</a></li>
+      <li><a href="http://demo.audiosharescript.com/termsofuse.php">Terms of Use</a></li>
+    </ul>
+  </div>
 </div>
 {% endblock %}
 
