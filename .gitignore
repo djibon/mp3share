@@ -1,0 +1,10 @@
+*.pyc
+dev.db
+pip-log.txt
+pinax-boot.py
+sample_data.json
+local_settings.py
+*.*~
+*~
+.ropeproject/*.pyc
+*.*~
