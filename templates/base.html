@@ -11,13 +11,12 @@
         </style><![endif]-->
         <link rel="stylesheet" href="{{ STATIC_URL }}pinax/css/base.css" />
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/global.css" />
-	{% comment %}
-	 <link rel="stylesheet" href="{{ STATIC_URL }}pinax/css/tabs.css" />
+	<link rel="stylesheet" href="{{ STATIC_URL }}uni_form/uni-form.css" /
+	<link rel="stylesheet" href="{{ STATIC_URL }}pinax/css/tabs.css" />
         <link rel="stylesheet" href="{{ STATIC_URL }}pinax/css/facebox.css" />
         <link rel="stylesheet" href="{{ STATIC_URL }}pinax/css/announcements.css" />
         <link rel="stylesheet" href="{{ STATIC_URL }}pinax/css/accounts.css" />
-        <link rel="stylesheet" href="{{ STATIC_URL }}uni_form/uni-form.css" />
-	{% endcomment %}
+	
         {% if LANGUAGE_BIDI %}
         <style type="text/css" media="screen">
             div.right_panel {
@@ -58,12 +57,17 @@
             </div>
         {% endif %}        
         {% block body_outer %}
-	<div id="mast_home_white">
+	<div id={% block login_block_class %}"mast"{% endblock %}>
+	   {% block login_block_logo %}<h1><a href="{% url home %}"><img src="{{ STATIC_URL }}images/logo.png"></a></h1>{% endblock %}
 	  <div class="center_wrap clearfix text_right blue">
 	    <ul id="nav_util_list">
 	      <li class="no_drop"><a href="http://demo.audiosharescript.com/upload.php" name="Upload Audio">Upload Audio</a></li>
+	      {% if user.is_authenticated %}
+	      <li class="no_drop last"><a href="{% url acct_logout %}">Log out</a></li> 
+	      {% else %}
 	      <li class="no_drop"><a href="{% url acct_login %}" name="Log in">Log in</a></li> 
 	      <li class="no_drop last"><a href="{% url acct_signup %}">Register</a></li> 
+	      {% endif %}
 	    </ul>
 	  </div>
 	</div>

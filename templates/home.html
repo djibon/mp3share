@@ -3,11 +3,12 @@
 {% load ifsetting_tag %}
 
 {% block head_title %}{% trans "Welcome" %}{% endblock %}
-
+{% block login_block_class %}"mast_home_white"{% endblock %};
+{% block login_block_logo %}{% endblock %}
 {% block body %}
 <div id="mast_home">
   <div class="center_wrap clearfix">
-    <h1><img alt="AudioShare - Audio Sharing Script" src="Home%20-%20AudioShare%20-%20Audio%20Sharing%20Script_files/logo_big.png"></h1>
+    <h1><img alt="AudioShare - Audio Sharing Script" src="{{ STATIC_URL }}images/logo_big.png"></h1>
       <p class="tagline">Find. Play. Enjoy.</p>
     </div>
   </div>
@@ -41,7 +42,7 @@
 	    </ul>
             <ul>                
               <li><a href="http://demo.audiosharescript.com/browse/categories/audios/z/10/1/Lifestyle">Lifestyle</a></li>
-            </u>l
+            </u>
             <ul>                
               <li><a href="http://demo.audiosharescript.com/browse/categories/audios/z/11/1/People">People</a></li>
             </ul>
